@@ -1,0 +1,360 @@
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    height: 100vh;
+}
+
+.app-container {
+    display: flex;
+    height: 100%;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid #34495e;
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #ecf0f1;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #34495e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    color: #ecf0f1;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.status {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-top: 3px;
+}
+
+.online {
+    background-color: #2ecc71;
+}
+
+.offline {
+    background-color: #e74c3c;
+}
+
+.sidebar-menu {
+    flex: 1;
+    padding: 15px 0;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #bdc3c7;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #34495e;
+    color: #ecf0f1;
+}
+
+.menu-item.active {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.menu-item i {
+    margin-right: 12px;
+    width: 20px;
+    text-align: center;
+}
+
+.badge {
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 10px;
+    padding: 2px 8px;
+    font-size: 0.7rem;
+    margin-left: auto;
+}
+
+.sidebar-footer {
+    padding: 20px;
+    border-top: 1px solid #34495e;
+}
+
+.quick-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #ecf0f1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: #34495e;
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.chat-container {
+    flex: 1;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+.chat-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.clear-chat {
+    background: none;
+    border: none;
+    color: #7f8c8d;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 20px;
+    max-width: 80%;
+    padding: 10px 15px;
+    border-radius: 18px;
+    position: relative;
+    word-wrap: break-word;
+}
+
+.message.system {
+    background-color: #f1f1f1;
+    color: #7f8c8d;
+    margin-left: auto;
+    margin-right: 0;
+    border-bottom-right-radius: 4px;
+}
+
+.message.user {
+    background-color: #3498db;
+    color: white;
+    margin-right: auto;
+    margin-left: 0;
+    border-bottom-left-radius: 4px;
+}
+
+.message-content {
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.chat-input {
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.chat-input input:focus {
+    border-color: #3498db;
+}
+
+.send-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.send-btn:hover {
+    background-color: #2980b9;
+}
+
+/* System Info Styles */
+.system-info {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.info-panel h4 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.status-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.status-card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+
+.status-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.status-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e1f5fe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    color: #00acc1;
+}
+
+.status-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.status-label {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+}
+
+.status-value {
+    font-weight: 600;
+    margin-top: 3px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .sidebar-header, .sidebar-menu, .sidebar-footer {
+        flex: 1 1 100%;
+        padding: 15px;
+    }
+    
+    .sidebar-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .menu-item {
+        padding: 8px 12px;
+    }
+    
+    .main-content {
+        padding: 10px;
+    }
+    
+    .status-grid {
+        grid-template-columns: 1fr;
+    }
+}
